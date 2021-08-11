@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap");
+
+body {
+  font-family: "Poppins";
+}
+
 .adaptive-glass {
   --glass-lightness: 100%;
   background: hsl(0 0% var(--glass-lightness) / 50%);

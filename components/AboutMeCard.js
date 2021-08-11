@@ -23,15 +23,17 @@ const Card = styled.div`
     margin-top: 130px;
     box-shadow: 1px 1px 6px rgba(0,0,0,.2);
 
-    @media only screen and (max-width: 1024px) {
-    &{
-            width: 80vw;
-        }
-    }
+    
 
     @media only screen and (max-width: 1024px) {
     &{
             width: 60vw;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+    &{
+            width: 80vw;
         }
     }
 
