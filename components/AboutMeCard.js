@@ -45,7 +45,7 @@ const Card = styled.div`
         left: calc(50% - 5em);
         width: 10em;
         border-radius: 50%;
-        background-color: red;
+        /* background-color: red; */
         background-image: url('images/me.jpeg');
         background-position: center;
         background-size: cover;
