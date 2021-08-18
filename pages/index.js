@@ -5,16 +5,34 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import Skills from '../components/Skills'
 import Works from '../components/Works'
+import firebase from '../firebase/config'
+import { useCollection } from "react-firebase-hooks/firestore";
 
-export default function Home() {
+
+
+const Home = ({projects}) => {
+  
+
   return (
     <>
      <Nav/>
      <Header/>
-     <Works/>
+     <Works projects = {projects}/>
      <Skills/>
      <About/>
      <Footer/>
     </>
   )
 }
+
+export async function getStaticProps() {
+  const res = await firebase.firestore().collection("projects").get();
+  const projects =  res.docs.map(e => ({...e.data(),id: e.id}));
+  return {
+    props: {
+      projects,
+    },
+  }
+}
+
+export default Home

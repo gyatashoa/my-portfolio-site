@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 export default function AboutMeCard() {
     
@@ -9,10 +10,19 @@ export default function AboutMeCard() {
     
     return (
         <Card>
+            <Img><Image className="rounded-full" layout="fill" src="/images/me.jpeg"/></Img>
             <p className="pt-24 pl-8 pr-8 pb-8 text-lg">{text}</p>
         </Card>
     )
 }
+
+const Img = styled.div`
+        position: absolute;
+        height: 10em;
+        top: -5em;
+        left: calc(50% - 5em);
+        width: 10em;
+`
 
 const Card = styled.div`
 
@@ -35,19 +45,5 @@ const Card = styled.div`
     &{
             width: 80vw;
         }
-    }
-
-    &::before{
-        content: '';
-        position: absolute;
-        height: 10em;
-        top: -5em;
-        left: calc(50% - 5em);
-        width: 10em;
-        border-radius: 50%;
-        /* background-color: red; */
-        background-image: url('images/me.jpeg');
-        background-position: center;
-        background-size: cover;
     }
 `

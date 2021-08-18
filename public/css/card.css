@@ -46,8 +46,10 @@ figure {
 }
 
 figure img {
-  display: block;
-  inline-size: 100%;
+  /* display: block; */
+  /* inline-size: 100%; */
+  max-height: 100px;
+  width: 100%;
   block-size: auto;
   -o-object-fit: cover;
   object-fit: cover;
